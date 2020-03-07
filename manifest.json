@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "How long are you",
+  "version": "1.0",
+  "description": "你有多长",
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon16.png",
+    "48": "images/icon16.png",
+    "128": "images/icon16.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [    
+    "http://*/*",
+    "https://*/*",
+    "storage"],
+  "browser_action": {
+    "default_icon": "images/icon16.png",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "toggle-tags": {
+      "suggested_key": {
+        "default": "Alt+S",
+        "mac": "MacCtrl+S"
+      },
+      "description": "你有多长"
+    }
+  }
+}
