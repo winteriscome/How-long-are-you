@@ -10,14 +10,12 @@
     "128": "images/icon16.png"
   },
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["background.js","js/jquery-3.4.1.min.js"],
     "persistent": false
   },
   "permissions": [    
-    "http://*/*",
-    "https://*/*",
-    "storage"],
-  "browser_action": {
+    "http://*/*","storage","alarms","tabs"],
+  "page_action": {
     "default_icon": "images/icon16.png",
     "default_popup": "popup.html"
   },
@@ -29,5 +27,11 @@
       },
       "description": "你有多长"
     }
-  }
+  },
+  "content_scripts":[{
+    "matches": [
+      "http://*.wondershare.cn/*"
+    ],
+    "js": [ "content.js","js/jquery-3.4.1.min.js"]
+}]
 }
