@@ -10,14 +10,12 @@
     "128": "images/icon.png"
   },
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["background.js","js/jquery-3.4.1.min.js"],
     "persistent": false
   },
   "permissions": [    
-    "http://*/*",
-    "https://*/*",
-    "storage"],
-  "browser_action": {
+    "http://*/*","storage","alarms","tabs"],
+  "page_action": {
     "default_icon": "images/icon16.png",
     "default_popup": "popup.html"
   },
@@ -34,7 +32,7 @@
     {
         "matches": ["*://*/*", "file://*"],
         "css": ["css/main.css"],
-        "js": ["js/contentScript.js"]
+        "js": [ "content.js","js/jquery-3.4.1.min.js"]
     }
 ]
 }
