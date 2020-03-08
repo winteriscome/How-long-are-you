@@ -10,35 +10,46 @@
     var signInfo = JSON.parse(signInfo);
     var workTime = JSON.parse(workTime); */
 
-    
+    var workTime;
+    var signInfo;
     //休息日
     var restDays = 0;
-    var start = date = new Date();
+    var date = new Date();
+    var start = new Date();
 
     month = date.getMonth()+1;
-    allDays = date.getDay();
+    allDays = date.getDate();
 
     date.setHours(0, 0, 0, 0);
-
     start.setDate(1);
-    start = start.getTime();
+    start = start.getTime()/1000;
 
     $.ajax({
         url: signInfoApi,
         type: "GET",
-        data: {'start':1583020800,
-        'end' : 1586649600},
+        async: false,
+        data: {'start':start,
+        'end' : start},
         success: function(result) {
             signInfo = result;
-        }
-    });
+            console.log(signInfo);
+        },
+        error: function(result) {
+            console.log(result);
+        },
+    }); 
 
     $.ajax({
         url: signMonthApi,
         type: "GET",
+        async: false,
         success: function(result) {
             workTime = result;
-        }
+            console.log(workTime.month)
+        },
+        error: function(result) {
+            alert(result);
+        },
     });
 
     signInfo[0].forEach(element => {
@@ -66,16 +77,39 @@
         allTime += parseFloat(val);
     })
 
-    averageWorkTime = allTime/(allDays-restDays);
-
+    workDays = allDays-restDays;
+    averageWorkTime = allTime/workDays;
+    allTime = allTime.toFixed(2);
     averageWorkTime = averageWorkTime.toFixed(2);
 
-    $("#list").append(`
+    var content = "";
+    if(averageWorkTime <= 8){
+        content = "你是灯塔，是自由之光";
+    }else if( 8 <= averageWorkTime < 9){
+        content = "你他娘的真是个人你才，躲过了堵车高峰";
+    }else if( 9 <= averageWorkTime < 10){
+        content = "勤勤恳恳的社畜你好";
+    }else if( 10 <= averageWorkTime < 11){
+        content = "就是你们这帮拉高了时长！惭愧不？";
+    }else if( 11 <= averageWorkTime < 12){
+        content = "爱护身体，拒绝猝死";
+    }else {
+        content = "明年的清明节我会很想念你";
+    };
+
+    $("#time").append(`
     <li>
-        <div class="date">
-            ${averageWorkTime}
-        </div>
+            本月当前总计时长： ${allTime} <br>
     </li>
+    <li>
+            官方工作天数： ${workDays} <br>
+    </li>
+    <li>
+            平均时长： ${averageWorkTime} <br>
+    </li>
+    <li>
+            评语： ${content} <br>
+    </li>        
     `);
 
 })(); 

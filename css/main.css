@@ -1,17 +1,17 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 10;
+    padding: 10;
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 100%;
 }
 
 body {
     font-family: 'DejaVu Sans Mono';
     color: #fff;
-    background-color: #1a172f;
+    background-color: #38a32f;
 }
 
 h1,
@@ -20,40 +20,17 @@ h3 {
     font-weight: normal;
 }
 
-ul {
-    list-style: none;
-}
-
 .container {
     width: 300px;
 }
 
-#today {
-    overflow: hidden;
-    padding-bottom: 5vw;
-    border-bottom: 1px dashed #fff;
+.title {
+    text-align: center;
 }
 
 #title {
     font-size: 2rem;
     margin: 3vw 0 0 3vw;
-}
-
-#updateTime {
-    font-size: 1.5rem;
-    margin: 1vw 0 0 3vw;
-}
-
-#pic {
-    text-align: center;
-}
-
-#pic p {
-    font-size: 1.5rem;
-}
-
-#info {
-    margin-top: 5vh;
 }
 
 #info li {
@@ -63,36 +40,4 @@ ul {
     text-align: center;
 }
 
-#info li p {
-    font-size: 1.7rem;
-}
 
-#list li {
-    line-height: 50px;
-    overflow: hidden;
-    height: 50px;
-}
-
-#list li:not(:last-child) {
-    border-bottom: 1px solid #ccc;
-}
-
-#list li div {
-    font-size: 1.5rem;
-    float: left;
-    text-align: center;
-}
-
-#list .date,
-.tempRange {
-    width: 30vw;
-}
-
-#list .weather {
-    width: 40vw;
-}
-
-.weather img {
-    width: 25%;
-    vertical-align: middle;
-}

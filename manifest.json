@@ -14,9 +14,16 @@
     "persistent": false
   },
   "permissions": [    
-    "http://*/*","storage","alarms","tabs"],
+    "http://*/*",
+    "https://*/*",
+    "storage",
+    //"webRequest",
+    "tabs",
+    "cookies",
+    "clipboardRead",
+    "clipboardWrite"],
   "page_action": {
-    "default_icon": "images/icon16.png",
+    "default_icon": "images/icon.png",
     "default_popup": "popup.html"
   },
   "commands": {
@@ -31,7 +38,6 @@
   "content_scripts": [
     {
         "matches": ["*://*/*", "file://*"],
-        "css": ["css/main.css"],
         "js": [ "content.js","js/jquery-3.4.1.min.js"]
     }
 ]
