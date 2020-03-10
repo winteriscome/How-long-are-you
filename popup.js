@@ -4,14 +4,14 @@
     //http://wos.wondershare.cn/sign/monthsign
     var signMonthApi = "http://wos.wondershare.cn/sign/monthsign";
 
-    // var sampleSignInfo = '[[{"title":"\u4f11\u606f\u65e5","start":"2020-03-01","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u7b7e\u5230:08:32","start":"2020-03-02","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:19:33","start":"2020-03-02","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u5e74\u5047:09:00","start":"2020-03-03","url":"#","backgroundColor":"#e67e22","borderColor":"#e67e22"},{"title":"\u5e74\u5047:18:00","start":"2020-03-03","url":"#","backgroundColor":"#e67e22","borderColor":"#e67e22"},{"title":"\u7b7e\u5230:08:39","start":"2020-03-04","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:20:32","start":"2020-03-04","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u7b7e\u5230:12:48","start":"2020-03-05","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:20:12","start":"2020-03-05","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u4e8b\u5047:09:00","start":"2020-03-05","url":"#","backgroundColor":"#e67e22","borderColor":"#e67e22"},{"title":"\u4e8b\u5047:12:00","start":"2020-03-05","url":"#","backgroundColor":"#e67e22","borderColor":"#e67e22"},{"title":"\u7b7e\u5230:08:37","start":"2020-03-06","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:20:04","start":"2020-03-06","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u7b7e\u5230:09:02","start":"2020-03-07","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:17:37","start":"2020-03-07","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-07","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-08","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u7b7e\u5230:08:35","start":"2020-03-09","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:20:21","start":"2020-03-09","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u7b7e\u5230:08:40","start":"2020-03-10","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-14","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-15","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-21","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-22","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-28","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-29","backgroundColor":"#34495e","borderColor":"#34495e"}],"18103116","2020-03","\u9648\u741b\u6587",0]';
-    // var sampleWorkTime = '{"month":["02-10","02-11","02-12","02-13","02-14","02-15","02-16","02-17","02-18","02-19","02-20","02-21","02-22","02-23","02-24","02-25","02-26","02-27","02-28","02-29","03-01","03-02","03-03","03-04","03-05","03-06","03-07","03-08","03-09","03-10"],"list":[0,0,0,0,0,0,0,0,0,0,"8.73","9.20","9.48",0,"9.22","9.67","9.22","9.18","9.42",0,0,"8.85",0,"9.72","6.03","9.28","8.58",0,"9.60",0]}';
+    var sampleSignInfo = '[[{"title":"\u4f11\u606f\u65e5","start":"2020-03-01","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u7b7e\u5230:08:32","start":"2020-03-02","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:19:33","start":"2020-03-02","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u5e74\u5047:09:00","start":"2020-03-03","url":"#","backgroundColor":"#e67e22","borderColor":"#e67e22"},{"title":"\u5e74\u5047:18:00","start":"2020-03-03","url":"#","backgroundColor":"#e67e22","borderColor":"#e67e22"},{"title":"\u7b7e\u5230:08:39","start":"2020-03-04","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:20:32","start":"2020-03-04","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u7b7e\u5230:12:48","start":"2020-03-05","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:20:12","start":"2020-03-05","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u4e8b\u5047:09:00","start":"2020-03-05","url":"#","backgroundColor":"#e67e22","borderColor":"#e67e22"},{"title":"\u4e8b\u5047:12:00","start":"2020-03-05","url":"#","backgroundColor":"#e67e22","borderColor":"#e67e22"},{"title":"\u7b7e\u5230:08:37","start":"2020-03-06","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:20:04","start":"2020-03-06","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u7b7e\u5230:09:02","start":"2020-03-07","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:17:37","start":"2020-03-07","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-07","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-08","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u7b7e\u5230:08:35","start":"2020-03-09","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:20:21","start":"2020-03-09","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u7b7e\u5230:08:40","start":"2020-03-10","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-14","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-15","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-21","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-22","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-28","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-29","backgroundColor":"#34495e","borderColor":"#34495e"}],"18103116","2020-03","\u9648\u741b\u6587",0]';
+    var sampleWorkTime = '{"month":["02-10","02-11","02-12","02-13","02-14","02-15","02-16","02-17","02-18","02-19","02-20","02-21","02-22","02-23","02-24","02-25","02-26","02-27","02-28","02-29","03-01","03-02","03-03","03-04","03-05","03-06","03-07","03-08","03-09","03-10"],"list":[0,0,0,0,0,0,0,0,0,0,"8.73","9.20","9.48",0,"9.22","9.67","9.22","9.18","9.42",0,0,"8.85",0,"9.72","6.03","9.28","8.58",0,"9.60",0]}';
 
-    // sampleSignInfo = JSON.parse(sampleSignInfo);
-    // sampleWorkTime = JSON.parse(sampleWorkTime);
+    sampleSignInfo = JSON.parse(sampleSignInfo);
+    sampleWorkTime = JSON.parse(sampleWorkTime);
 
-    var sampleSignInfo = '';
-    var sampleWorkTime = '';
+    // var sampleSignInfo = '';
+    // var sampleWorkTime = '';
 
     var workTime;
     var signInfo;
@@ -75,10 +75,17 @@
 
         thisMonthTime = workTime.list.slice(key)
 
-        var allTime = 0;
+        var allTime = realWorkDays = 0;
         thisMonthTime.forEach((val) => {
             val = parseFloat(val);
-            allTime += (isNaN(val) ? 0.0 : val);
+            if (isNaN(val)) {
+                val = 0.0;
+            }
+            if (val > 0.0) {
+                realWorkDays++;
+            }
+
+            allTime += val;
         })
 
         console.log(allDays, restDays);
@@ -93,15 +100,15 @@
             content = "你是灯塔，是自由之光。";
             grade = "旁观者";
             level = "D";
-        } else if (8 <= averageWorkTime && averageWorkTime < 9) {
+        } else if (averageWorkTime < 9) {
             content = "你他娘的真是个人才，躲过了堵车高峰！";
             grade = "思考者";
             level = "C";
-        } else if (9 <= averageWorkTime && averageWorkTime < 10) {
+        } else if (averageWorkTime < 10) {
             content = "勤勤恳恳的社畜你好！";
             grade = "实践者";
             level = "B";
-        } else if (10 <= averageWorkTime && averageWorkTime < 11) {
+        } else if (averageWorkTime < 11) {
             content = "就是你们这帮拉高了时长！惭愧不？";
             grade = "推动者";
             level = "A";
@@ -125,6 +132,9 @@
                 </li>
                 <li>
                         官方工作天数（不包含今日）： ${workDays} <br>
+                </li>
+                <li>
+                        实际出勤天数（不包含今日）： ${realWorkDays} <br>
                 </li>
                 <li>
                         平均时长：${averageWorkTime} <br>
