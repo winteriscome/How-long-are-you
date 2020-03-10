@@ -4,11 +4,14 @@
     //http://wos.wondershare.cn/sign/monthsign
     var signMonthApi = "http://wos.wondershare.cn/sign/monthsign";
 
-    /*     var signInfo = '[[{"title":"休息日","start":"2020-03-01","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"签到:08:28","start":"2020-03-02","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"签退:20:50","start":"2020-03-02","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"签到:08:41","start":"2020-03-03","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"签退:21:29","start":"2020-03-03","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"签到:08:53","start":"2020-03-04","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"签退:20:27","start":"2020-03-04","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"签到:08:44","start":"2020-03-05","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"签退:21:14","start":"2020-03-05","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"签到:08:17","start":"2020-03-06","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"签退:21:19","start":"2020-03-06","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"签到:09:51","start":"2020-03-07","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"休息日","start":"2020-03-07","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"休息日","start":"2020-03-08","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"休息日","start":"2020-03-14","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"休息日","start":"2020-03-15","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"休息日","start":"2020-03-21","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"休息日","start":"2020-03-22","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"休息日","start":"2020-03-28","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"休息日","start":"2020-03-29","backgroundColor":"#34495e","borderColor":"#34495e"}],"18093102","2020-03","刘冬冬",0]';
-        var workTime = '{"month":["02-07","02-08","02-09","02-10","02-11","02-12","02-13","02-14","02-15","02-16","02-17","02-18","02-19","02-20","02-21","02-22","02-23","02-24","02-25","02-26","02-27","02-28","02-29","03-01","03-02","03-03","03-04","03-05","03-06","03-07"],"list":["7.32",0,0,"9.78","9.27","11.03","11.97","11.87","12.05","10.57","11.63","11.47","11.42","8.17","8.77","9.52",0,"11.07","9.70","9.23","9.20","9.05",0,0,"10.20","10.63","9.40","10.33","10.87",0]}';
-    
-        var signInfo = JSON.parse(signInfo);
-        var workTime = JSON.parse(workTime); */
+    // var sampleSignInfo = '[[{"title":"\u4f11\u606f\u65e5","start":"2020-03-01","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u7b7e\u5230:08:32","start":"2020-03-02","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:19:33","start":"2020-03-02","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u5e74\u5047:09:00","start":"2020-03-03","url":"#","backgroundColor":"#e67e22","borderColor":"#e67e22"},{"title":"\u5e74\u5047:18:00","start":"2020-03-03","url":"#","backgroundColor":"#e67e22","borderColor":"#e67e22"},{"title":"\u7b7e\u5230:08:39","start":"2020-03-04","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:20:32","start":"2020-03-04","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u7b7e\u5230:12:48","start":"2020-03-05","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:20:12","start":"2020-03-05","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u4e8b\u5047:09:00","start":"2020-03-05","url":"#","backgroundColor":"#e67e22","borderColor":"#e67e22"},{"title":"\u4e8b\u5047:12:00","start":"2020-03-05","url":"#","backgroundColor":"#e67e22","borderColor":"#e67e22"},{"title":"\u7b7e\u5230:08:37","start":"2020-03-06","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:20:04","start":"2020-03-06","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u7b7e\u5230:09:02","start":"2020-03-07","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:17:37","start":"2020-03-07","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-07","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-08","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u7b7e\u5230:08:35","start":"2020-03-09","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u7b7e\u9000:20:21","start":"2020-03-09","url":"#","backgroundColor":"#3498db","borderColor":"#3498db"},{"title":"\u7b7e\u5230:08:40","start":"2020-03-10","url":"#","backgroundColor":"#62cb31","borderColor":"#62cb31"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-14","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-15","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-21","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-22","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-28","backgroundColor":"#34495e","borderColor":"#34495e"},{"title":"\u4f11\u606f\u65e5","start":"2020-03-29","backgroundColor":"#34495e","borderColor":"#34495e"}],"18103116","2020-03","\u9648\u741b\u6587",0]';
+    // var sampleWorkTime = '{"month":["02-10","02-11","02-12","02-13","02-14","02-15","02-16","02-17","02-18","02-19","02-20","02-21","02-22","02-23","02-24","02-25","02-26","02-27","02-28","02-29","03-01","03-02","03-03","03-04","03-05","03-06","03-07","03-08","03-09","03-10"],"list":[0,0,0,0,0,0,0,0,0,0,"8.73","9.20","9.48",0,"9.22","9.67","9.22","9.18","9.42",0,0,"8.85",0,"9.72","6.03","9.28","8.58",0,"9.60",0]}';
+
+    // sampleSignInfo = JSON.parse(sampleSignInfo);
+    // sampleWorkTime = JSON.parse(sampleWorkTime);
+
+    var sampleSignInfo = '';
+    var sampleWorkTime = '';
 
     var workTime;
     var signInfo;
@@ -29,30 +32,38 @@
             method: 'get',
             url: signInfoApi + "?start=" + start,
         }).then(res => {
-            return res.data
+            return sampleSignInfo || res.data;
         })
     }
     async function getWorkTime() {
         return axios({
             url: signMonthApi,
         }).then(res => {
-            return res.data
-        })  
+            return sampleWorkTime || res.data;
+        })
     }
 
     async function ajaxInit() {
         workTime = await getWorkTime()
         signInfo = await getSignInfo()
         console.log(workTime, signInfo)
-        signInfo[0].forEach(element => {
+        for (var element, nextElement, i = 0, l = signInfo[0].length; i < l; i++) {
+            element = signInfo[0][i], nextElement = signInfo[0][i+1];
             todayStr = element.start + " 00:00:00:000";
             var signDay = new Date(todayStr);
             if (signDay.getTime() < date.getTime()) {
                 if (element.title == "休息日") {
                     restDays++;
                 }
+
+                if (-1 !== element.title.indexOf("假:09:00")) {
+                    if (nextElement && -1 !== nextElement.title.indexOf("假:18:00")) {
+                        i++;
+                        restDays++;
+                    }
+                }
             }
-        });
+        }
 
         //本月工作总时长
         workTime.month.some((element, i) => {
@@ -65,46 +76,76 @@
         thisMonthTime = workTime.list.slice(key)
 
         var allTime = 0;
-        thisMonthTime.forEach((val, index) => {
-            allTime += parseFloat(val);
+        thisMonthTime.forEach((val) => {
+            val = parseFloat(val);
+            allTime += (isNaN(val) ? 0.0 : val);
         })
 
-        console.log(allDays,restDays);
+        console.log(allDays, restDays);
         workDays = allDays - restDays;
         averageWorkTime = allTime / workDays;
         allTime = allTime.toFixed(2);
         averageWorkTime = averageWorkTime.toFixed(2);
 
         console.log(averageWorkTime);
-        var content = "";
-        if (averageWorkTime <= 8) {
-            content = "你是灯塔，是自由之光";
+        var content = grade = level = "";
+        if (averageWorkTime < 8) {
+            content = "你是灯塔，是自由之光。";
+            grade = "旁观者";
+            level = "D";
         } else if (8 <= averageWorkTime && averageWorkTime < 9) {
-            content = "你他娘的真是个人你才，躲过了堵车高峰";
+            content = "你他娘的真是个人才，躲过了堵车高峰！";
+            grade = "思考者";
+            level = "C";
         } else if (9 <= averageWorkTime && averageWorkTime < 10) {
-            content = "勤勤恳恳的社畜你好";
+            content = "勤勤恳恳的社畜你好！";
+            grade = "实践者";
+            level = "B";
         } else if (10 <= averageWorkTime && averageWorkTime < 11) {
             content = "就是你们这帮拉高了时长！惭愧不？";
-        } else if (11 <= averageWorkTime && averageWorkTime < 12) {
-            content = "爱护身体，拒绝猝死!";
+            grade = "推动者";
+            level = "A";
         } else {
-            content = "明年的清明节我会很想念你!";
+            if (averageWorkTime >= 12) {
+                content = "明年的清明节我会很想念你!";
+            } else {
+                content = "爱护身体，拒绝猝死！";
+            }
+            grade = "引领者";
+            level = "S";
         };
 
-        $("#time").append(`
-            <li>
-                    本月当前总计时长： ${allTime} <br>
-            </li>
-            <li>
-                    官方工作天数（不包含今日）： ${workDays} <br>
-            </li>
-            <li>
-                    平均时长： ${averageWorkTime} <br>
-            </li>
-            <li>
-                    评语： ${content} <br>
-            </li>        
-    `);
+        setTimeout(() => {
+            $("#time").html(`
+                <li>
+                        <strong> ${grade} ${level} </strong> <br>
+                </li>
+                <li>
+                        本月当前总计时长：${allTime} <br>
+                </li>
+                <li>
+                        官方工作天数（不包含今日）： ${workDays} <br>
+                </li>
+                <li>
+                        平均时长：${averageWorkTime} <br>
+                </li>
+                <li>
+                        评语：${content} <br>
+                </li>
+            `);
+        }, 600);
     }
+
+    var interval, length = 0;
+    $("#time").html(`<li id="msg"> 客官别急，让我看看你有多长.</li>`);
+    interval = setInterval(function() {
+        length++;
+        if (length >= 8) {
+            clearInterval(interval);
+            return;
+        }
+        $("#msg").append('.');
+    }, 300);
+
     ajaxInit()
-})(); 
+})();
