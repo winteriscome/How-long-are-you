@@ -13,11 +13,10 @@
     "scripts": ["background.js","js/jquery-3.4.1.min.js"],
     "persistent": false
   },
-  "permissions": [    
+  "permissions": [
     "http://*/*",
     "https://*/*",
     "storage",
-    //"webRequest",
     "tabs",
     "cookies",
     "clipboardRead",

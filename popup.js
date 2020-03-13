@@ -95,32 +95,38 @@
         averageWorkTime = averageWorkTime.toFixed(2);
 
         console.log(averageWorkTime);
-        var content = grade = level = "";
+        var content = "";
         if (averageWorkTime < 8) {
             content = "你是灯塔，是自由之光。";
+        } else if (averageWorkTime < 9) {
+            content = "你他娘的真是个人才，躲过了堵车高峰！";
+        } else if (averageWorkTime < 10) {
+            content = "勤勤恳恳的社畜你好！";
+        } else if (averageWorkTime < 11) {
+            content = "就是你们这帮拉高了时长！惭愧不？";
+        } else if (averageWorkTime < 12) {
+            content = "爱护身体，拒绝猝死！";
+        } else {
+            content = "明年的清明节我会很想念你!";
+        };
+
+        var grade = level = "";
+        if (averageWorkTime < 8) {
             grade = "旁观者";
             level = "D";
         } else if (averageWorkTime < 9) {
-            content = "你他娘的真是个人才，躲过了堵车高峰！";
             grade = "思考者";
             level = "C";
-        } else if (averageWorkTime < 10) {
-            content = "勤勤恳恳的社畜你好！";
+        } else if (averageWorkTime < 11) {
             grade = "实践者";
             level = "B";
-        } else if (averageWorkTime < 11) {
-            content = "就是你们这帮拉高了时长！惭愧不？";
+        } else if (averageWorkTime < 12) {
             grade = "推动者";
             level = "A";
         } else {
-            if (averageWorkTime >= 12) {
-                content = "明年的清明节我会很想念你!";
-            } else {
-                content = "爱护身体，拒绝猝死！";
-            }
             grade = "引领者";
             level = "S";
-        };
+        }
 
         setTimeout(() => {
             $("#time").html(`
