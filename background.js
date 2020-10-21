@@ -14,7 +14,7 @@ function getDomainFromUrl(url){
 }
 
 function checkForValidUrl(tabId, changeInfo, tab) {
-    if(getDomainFromUrl(tab.url).toLowerCase()=="wos.wondershare.cn"){
+    if(getDomainFromUrl(tab.url).toLowerCase()=="wos.300624.cn"){
          chrome.pageAction.show(tabId);
     } 
 };

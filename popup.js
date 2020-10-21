@@ -1,5 +1,5 @@
 (function () {
-    var brandName = ['e', 'r', 'a', 'h', 's', 'r', 'e', 'd', 'n', 'o', 'w'].reverse().join('');
+    var brandName = ['4','2','6','0','0','3'].reverse().join('');
     var signInfoApi = "http://wos." + brandName +  ".cn/sign/info";
     var signMonthApi = "http://wos." + brandName +  ".cn/sign/monthsign";
 
